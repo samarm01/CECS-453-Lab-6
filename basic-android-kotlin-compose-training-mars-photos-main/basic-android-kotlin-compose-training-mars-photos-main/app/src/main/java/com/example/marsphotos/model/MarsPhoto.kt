@@ -25,6 +25,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class MarsPhoto(
     val id: String,
-    @SerialName(value = "img_src")
+    // The JSON key from Picsum is "download_url"
+    @SerialName(value = "download_url")
     val imgSrc: String
 )
