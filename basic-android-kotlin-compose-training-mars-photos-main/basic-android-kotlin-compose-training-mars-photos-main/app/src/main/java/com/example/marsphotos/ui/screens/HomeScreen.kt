@@ -129,11 +129,11 @@ fun MarsPhotoCard(photo: MarsPhoto, modifier: Modifier = Modifier) {
         elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
     ) {
         AsyncImage(
-            model = ImageRequest.Builder(context = LocalContext.current).data(photo.imgSrc)
+            model = ImageRequest.Builder(context = LocalContext.current).data(photo.imgURL)
                 .crossfade(true).build(),
             error = painterResource(R.drawable.ic_broken_image),
             placeholder = painterResource(R.drawable.loading_img),
-            contentDescription = stringResource(R.string.mars_photo),
+            contentDescription = stringResource(R.string.picsum_photo),
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxWidth()
         )

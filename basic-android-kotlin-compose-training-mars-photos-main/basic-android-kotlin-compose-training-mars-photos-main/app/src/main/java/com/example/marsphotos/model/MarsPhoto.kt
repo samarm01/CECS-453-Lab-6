@@ -27,5 +27,5 @@ data class MarsPhoto(
     val id: String,
     // The JSON key from Picsum is "download_url"
     @SerialName(value = "download_url")
-    val imgSrc: String
+    val imgURL: String
 )
